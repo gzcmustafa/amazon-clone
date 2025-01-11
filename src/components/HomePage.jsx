@@ -4,7 +4,6 @@ import {Carousel, CarouselCategory, HomePageCard} from "./"
   return (
     <div className='bg-amazon-background'>
       <div className='min-w-[1000px] max-w-[1500px] bg-amazon-background m-auto'>
-        Testing
         <Carousel/>
         <div className="relative z-30 grid grid-cols-3 xl:grid-cols-4 -mt-60">
           <HomePageCard 
@@ -93,7 +92,37 @@ import {Carousel, CarouselCategory, HomePageCard} from "./"
           
          
         </div>
-        <CarouselCategory title={"Related to items you've viewed"}/>
+        <CarouselCategory  images={[
+            "/images/carouselctg_3.jpg",
+            "/images/carouselctg_1.jpg",
+            "/images/carouselctg_2.jpg",
+            "/images/carouselctg_3.jpg",
+            "/images/carouselctg_4.jpg",
+            "/images/carouselctg_5.jpg",
+            "/images/carouselctg_6.jpg",
+            "/images/carouselctg_7.jpg",
+            "/images/carouselctg_8.jpg",
+            "/images/carouselctg_9.jpg",
+            "/images/carouselctg_10.jpg"
+          ]} title={"Related to items you've viewed"}/>
+
+        <CarouselCategory  images={[
+            "/images/carouselctg_13.jpg",
+            "/images/carouselctg_14.jpg",
+            "/images/carouselctg_15.jpg",
+            "/images/carouselctg_16.jpg",
+            "/images/carouselctg_17.jpg",
+            "/images/carouselctg_18.jpg",
+            "/images/carouselctg_19.jpg",
+            "/images/carouselctg_20.jpg",
+            "/images/carouselctg_21.jpg",
+            "/images/carouselctg_22.jpg",
+            "/images/carouselctg_13.jpg",
+            "/images/carouselctg_16.jpg",
+            "/images/carouselctg_20.jpg",
+            "/images/carouselctg_15.jpg",
+            "/images/carouselctg_18.jpg"
+          ]} title={"Popular items this season"}/>
       </div>
     </div>
   )
