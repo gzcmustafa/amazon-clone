@@ -1,5 +1,7 @@
 import { Bars3Icon } from '@heroicons/react/24/outline'
-import { MagnifyingGlassIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
+import {  ShoppingCartIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
+import {Search} from './'
 
 
 const Navbar = () => {
@@ -8,32 +10,14 @@ const Navbar = () => {
         <div className='flex bg-amazon text-white'>
             {/* Left */}
             <div className='flex items-center m-4'>
-                <img className='h-[30px] w-[100px] m-2'  src={"/images/amazon.png"} alt="" />
+              <Link to={"/"}>  <img className='h-[30px] w-[100px] m-2'  src={"/images/amazon.png"} alt="" /></Link>
                 <div className='pr-4 pl-4'>
                     <div className='text-xs xl:text-sm'>Deliver to</div>
                     <div className='text-sm xl:text-base font-bold'>Turkey</div>
                 </div>
             </div>
             {/* Middle */}
-            <div className='flex grow relative items-center'>
-                <div className="w-[100%]">
-                    <div className='flex items-center h-10 bg-amazon-yellow rounded'>
-                        <select className='text-black p-2 bg-gray-300 border text-xs xl:text-sm' >
-                            <option>All</option>
-                            <option>Deals</option>
-                            <option>Amazon</option>
-                            <option>Fashion</option>
-                            <option>Computers</option>
-                            <option>Home</option>
-                            <option>Mobiles</option>
-                        </select>
-                        <input className='flex grow items-center h-[100%] rounded-l text-black' type="text" />
-                        <button className='w-[45px]'>
-                            <MagnifyingGlassIcon className='h-[27px] m-auto stroke-slate-900' />
-                        </button>
-                    </div>
-                </div>
-            </div>
+                <Search/>
             {/* Right */}
             <div className='flex items-center m-4'>
 
@@ -47,13 +31,14 @@ const Navbar = () => {
                     <div className='text-sm xl:text-base font-bold'>& Orders</div>
                 </div>
 
-                <div className='flex pr-3 pl-3'>
-                    <ShoppingCartIcon className='h-[48px]' />
-                    <div className='mt-7 text-xs xl:text-sm font-bold'>
-                        Cart
+                <Link to={"/checkout"}>
+                    <div className='flex pr-3 pl-3'>
+                        <ShoppingCartIcon className='h-[48px]' />
+                        <div className='mt-7 text-xs xl:text-sm font-bold'>
+                            Cart
+                        </div>
                     </div>
-                </div>
-
+                </Link>
             </div>
         </div>
         <div className='flex bg-amazon-light_blue text-white space-x-6 text-xs xl:text-sm p-2 pl-6'>

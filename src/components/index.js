@@ -9,6 +9,7 @@ export {default as SearchResults} from "./SearchResults"
 export {default as ProductDetails} from "./ProductDetails"
 export {default as ProductBadge} from "./ProductBadge"
 export {default as ProductRatings} from "./ProductRatings"
+export {default as Search} from "./Search"
 
 
 
