@@ -1,11 +1,11 @@
 import {Carousel, CarouselCategory, HomePageCard} from "./"
-
+"srccomponentsSearchResults.jsx"
  const HomePage = () => {
   return (
     <div className='bg-amazon-background'>
       <div className='min-w-[1000px] max-w-[1500px] bg-amazon-background m-auto'>
         <Carousel/>
-        <div className="relative z-30 grid grid-cols-3 xl:grid-cols-4 -mt-60">
+        <div className="relative z-30 grid grid-cols-3 xl:grid-cols-4 -mt-[290px]">
           <HomePageCard 
           title={"Gaming accessories"} 
           images={[

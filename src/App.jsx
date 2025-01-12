@@ -1,5 +1,5 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom"
-import { HomePage, Navbar } from './components'
+import { Checkout, HomePage, Navbar, ProductPage, SearchResults } from './components'
 function App() {
 
 
@@ -8,7 +8,10 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
+        <Route exact path="/" element={<HomePage/>}/>
+        <Route path="/search" element={<SearchResults/>}/>
+        <Route path="/product/:id" element={<ProductPage/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
       </Routes>
       </BrowserRouter>
     </>

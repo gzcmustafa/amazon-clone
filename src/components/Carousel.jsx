@@ -6,7 +6,7 @@ import 'swiper/css/autoplay';
 
 const Carousel = () => {
   return (
-    <div className="h-[600px] bg-white relative z-0">
+    <div className="h-[600px] bg-white relative z-0 ">
       <Swiper
         spaceBetween={0}
         loop={true}

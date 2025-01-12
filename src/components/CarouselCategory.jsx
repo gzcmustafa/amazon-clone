@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import {Link} from "react-router-dom"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
@@ -19,10 +20,12 @@ const CarouselCategory = ({title,images}) => {
       >
         
         {
-          images.map((image,index)=> (
-            <SwiperSlide>
-          <img src={image}  />
-        </SwiperSlide>
+          images.map((image,i)=> (
+            <SwiperSlide  key={i}>
+               <Link to={`/product/${i}`}>
+                 <img src={image}  />
+               </Link>
+            </SwiperSlide>
           ))
         }
        
