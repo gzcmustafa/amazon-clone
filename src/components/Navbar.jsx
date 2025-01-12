@@ -1,4 +1,5 @@
-import { ShoppingCartIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon } from '@heroicons/react/24/outline'
+import { MagnifyingGlassIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
 
 
 const Navbar = () => {
@@ -14,8 +15,24 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Middle */}
-            <div className='flex'>
-                Middle
+            <div className='flex grow relative items-center'>
+                <div className="w-[100%]">
+                    <div className='flex items-center h-10 bg-amazon-yellow rounded'>
+                        <select className='text-black p-2 bg-gray-300 border text-xs xl:text-sm' >
+                            <option>All</option>
+                            <option>Deals</option>
+                            <option>Amazon</option>
+                            <option>Fashion</option>
+                            <option>Computers</option>
+                            <option>Home</option>
+                            <option>Mobiles</option>
+                        </select>
+                        <input className='flex grow items-center h-[100%] rounded-l text-black' type="text" />
+                        <button className='w-[45px]'>
+                            <MagnifyingGlassIcon className='h-[27px] m-auto stroke-slate-900' />
+                        </button>
+                    </div>
+                </div>
             </div>
             {/* Right */}
             <div className='flex items-center m-4'>
@@ -38,6 +55,14 @@ const Navbar = () => {
                 </div>
 
             </div>
+        </div>
+        <div className='flex bg-amazon-light_blue text-white space-x-6 text-xs xl:text-sm p-2 pl-6'>
+            <div className='flex justify-center items-center font-bold'><Bars3Icon className=' font-bold h-[24px]'/>All</div>
+            <div>Today's Deals</div>
+            <div>Customer Service</div>
+            <div>Registry</div>
+            <div>Gift Cards</div>
+            <div>Sell</div>
         </div>
     </header>
   )

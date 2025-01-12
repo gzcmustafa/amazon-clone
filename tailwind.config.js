@@ -9,7 +9,7 @@ export default {
       colors:{
         amazon:{
           background: "#E3E6E6",
-          light_blue:"#232FF3A",
+          light_blue:"#232F3E",
           yellow:"#FEBD69",
           DEFAULT:"#131921"
 
