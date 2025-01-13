@@ -1,4 +1,4 @@
-import {Carousel, CarouselCategory, HomePageCard} from "./"
+import {Carousel, HomeSlider, HomePageCard, CarouselCategory} from "./"
 "srccomponentsSearchResults.jsx"
  const HomePage = () => {
   return (
@@ -92,7 +92,8 @@ import {Carousel, CarouselCategory, HomePageCard} from "./"
           
          
         </div>
-        <CarouselCategory  images={[
+        <CarouselCategory/>
+        <HomeSlider  images={[
             "/images/carouselctg_3.jpg",
             "/images/carouselctg_1.jpg",
             "/images/carouselctg_2.jpg",
@@ -106,7 +107,7 @@ import {Carousel, CarouselCategory, HomePageCard} from "./"
             "/images/carouselctg_10.jpg"
           ]} title={"Related to items you've viewed"}/>
 
-        <CarouselCategory  images={[
+        <HomeSlider  images={[
             "/images/carouselctg_13.jpg",
             "/images/carouselctg_14.jpg",
             "/images/carouselctg_15.jpg",
