@@ -16,9 +16,7 @@ const CarouselCategory = ({title,images}) => {
         navigation={true}
         slidesPerView={5}
         modules={[Navigation]}
-        
       >
-        
         {
           images.map((image,i)=> (
             <SwiperSlide  key={i}>
