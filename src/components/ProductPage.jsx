@@ -20,8 +20,8 @@ const ProductPage = () => {
     }
 
     const addQuantityToProduct = () => {
-      setProduct(product.quantity = quantity)
-      return product;
+      const productWithQuantity = { ...product, quantity: parseInt(quantity) };
+      return productWithQuantity;
     }
     
 
@@ -56,18 +56,22 @@ const ProductPage = () => {
               <div className='text-sm xl:text-base text-blue-500 font-semibold mt-3'>FREE Returns</div>
               <div className='text-sm xl:text-base text-blue-500 font-semibold mt-1'>FREE Delivery</div>
               <div className='text-sm xl:text-lg text-green-700 font-semibold mt-1'>In Stock</div>
-              <div className='text-sm xl:text-lg mt-1 '>Quantity:
-                <select onChange={(e)=>{setQuantity(e.target.value)}} className='p-1 bg-white border rounded-md focus:border-indigo-600' name="" id="">
-                  <option value="">1</option>
-                  <option value="">2</option>
-                  <option value="">3</option>
-                  <option value="">4</option>
-                  <option value="">5</option>
-                  <option value="">6</option>
-                  <option value="">7</option>
-                  <option value="">8</option>
-                  <option value="">9</option>
-                  <option value="">10</option>
+              <div className='text-sm xl:text-lg mt-1'>
+                Quantity:
+                <select 
+                  onChange={(e) => setQuantity(e.target.value)} 
+                  className='p-1 bg-white border rounded-md focus:border-indigo-600'
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
                 </select>
               </div>
              <Link to={"/checkout"}>
