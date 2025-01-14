@@ -1,13 +1,15 @@
 import {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-
 import {callAPI} from "../utils/CallApi"
 import { TR_CURRENCY } from '../utils/constants';
 import {ProductDetails} from './';
+import { useDispatch } from 'react-redux';
+import {addToCart} from "../redux/cartSlice"
 
 const ProductPage = () => {
     const {id} = useParams();
     const [product,setProduct] = useState(null);
+    const dispatch = useDispatch();
 
     const getProduct = () => {
       callAPI(`data/products.json`)
@@ -54,7 +56,7 @@ const ProductPage = () => {
                   <option value="">3</option>
                 </select>
               </div>
-              <button className='bg-yellow-400 w-full p-3 text-xs xl:Text-sm rounded hover:bg-yellow-500 mt-3'>Add to Cart</button>
+              <button onClick={() => dispatch(addToCart())} className='bg-yellow-400 w-full p-3 text-xs xl:Text-sm rounded hover:bg-yellow-500 mt-3'>Add to Cart</button>
           </div>
         </div>  
       </div>      
