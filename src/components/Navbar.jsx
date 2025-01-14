@@ -37,7 +37,7 @@ const Navbar = () => {
                     <div className='flex pr-3 pl-3'>
                         <ShoppingCartIcon className='h-[48px]' />
                         <div className='relative'>
-                            <div className='absolute right-[9px] font-bold m-2 text-orange-500'>
+                            <div className='absolute right-[9px] font-bold m-2  text-orange-500'>
                                 {cart}
                             </div>
                         </div>
