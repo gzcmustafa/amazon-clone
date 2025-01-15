@@ -20,7 +20,8 @@ export const cartSlice = createSlice({
             
             state.productsNumber = state.productsNumber + parseInt(action.payload.quantity);
             
-            // LocalStorage'a kaydet
+            
+            
             localStorage.setItem('cartProducts', JSON.stringify(state.products));
             localStorage.setItem('cartProductsNumber', state.productsNumber);
         },

@@ -71,7 +71,7 @@ import {Carousel, HomeSlider, HomePageCard, CarouselCategory} from "./"
             "/images/home_grid_11.jpg",
             "/images/home_grid_12.jpg"
           ]}
-          link={"See More"}
+          link={"See More "}
           />
            <HomePageCard 
           title={"New year, now you"} 
