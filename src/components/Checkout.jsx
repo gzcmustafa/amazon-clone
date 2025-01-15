@@ -2,7 +2,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
 import { TR_CURRENCY } from "../utils/constants";
-
+import {
+  removeFromCart,
+  decrementInCart,
+  incrementInCart,
+} from "../redux/cartSlice";
 
 const Checkout = () => {
   const products = useSelector((state) => state.cart.products);
